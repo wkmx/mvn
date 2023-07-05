@@ -28,8 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker pull gcr.io/cloud-builders/mvn@sha256:57523fc43394d6d9d2414ee8d1c85ed7a13460cbb268c3cd16d28cfb3859e641 #tag: latest
-          docker tag gcr.io/cloud-builders/mvn@sha256:57523fc43394d6d9d2414ee8d1c85ed7a13460cbb268c3cd16d28cfb3859e641 wkmx/cloud-builders-mvn:latest
+          # docker pull gcr.io/cloud-builders/mvn@sha256:57523fc43394d6d9d2414ee8d1c85ed7a13460cbb268c3cd16d28cfb3859e641 #tag: latest
+          # docker tag gcr.io/cloud-builders/mvn@sha256:57523fc43394d6d9d2414ee8d1c85ed7a13460cbb268c3cd16d28cfb3859e641 wkmx/cloud-builders-mvn:latest
+          docker pull registry.access.redhat.com/ubi8/ubi-minimal:8.2
+          docker tag registry.access.redhat.com/ubi8/ubi-minimal:8.2 wkmx/ubi8-ubi-minimal:8.2
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -37,4 +39,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/cloud-builders-mvn:latest
+          docker push wkmx/ubi8-ubi-minimal:8.2
