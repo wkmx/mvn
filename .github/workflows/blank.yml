@@ -48,10 +48,6 @@ jobs:
           docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.49.0@sha256:643cf8dbc46fbbfb9f333628c33bbdfb76d11b5005c2aaed28abdc20f739d0b8 
           docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.49.0@sha256:643cf8dbc46fbbfb9f333628c33bbdfb76d11b5005c2aaed28abdc20f739d0b8 wkmx/tektoncd-pipeline-cmd-workingdirinit:v0.49.0
 
-          docker pull mcr.microsoft.com/powershell:nanoserver@sha256:b6d5ff841b78bdf2dfed7550000fd4f3437385b8fa686ec0f010be24777654d6 
-          docker tag mcr.microsoft.com/powershell:nanoserver@sha256:b6d5ff841b78bdf2dfed7550000fd4f3437385b8fa686ec0f010be24777654d6  wkmx/powershell:nanoserver:latest
-
-
           docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/docker pull events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d
           docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/docker pull events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d wkmx/tektoncd/pipeline-cmd-events:v0.49.0
 
@@ -73,7 +69,6 @@ jobs:
           docker push wkmx/tektoncd-pipeline-cmd-nop:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-sidecarlogresults:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-workingdirinit:v0.49.0
-          docker push wkmx/powershell:nanoserver:latest
           docker push wkmx/tektoncd/pipeline-cmd-events:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-resolvers:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-webhook:v0.49.0
