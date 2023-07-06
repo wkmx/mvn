@@ -69,6 +69,6 @@ jobs:
           docker push wkmx/tektoncd-pipeline-cmd-nop:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-sidecarlogresults:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-workingdirinit:v0.49.0
-          docker push wkmx/tektoncd/pipeline-cmd-events:v0.49.0
+          docker push wkmx/tektoncd-pipeline-cmd-events:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-resolvers:v0.49.0
           docker push wkmx/tektoncd-pipeline-cmd-webhook:v0.49.0
