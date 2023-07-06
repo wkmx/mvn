@@ -48,8 +48,8 @@ jobs:
           docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.49.0@sha256:643cf8dbc46fbbfb9f333628c33bbdfb76d11b5005c2aaed28abdc20f739d0b8 
           docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.49.0@sha256:643cf8dbc46fbbfb9f333628c33bbdfb76d11b5005c2aaed28abdc20f739d0b8 wkmx/tektoncd-pipeline-cmd-workingdirinit:v0.49.0
 
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/docker pull events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/docker pull events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d wkmx/tektoncd/pipeline-cmd-events:v0.49.0
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d
+          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d wkmx/tektoncd/pipeline-cmd-events:v0.49.0
 
           docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.49.0@sha256:78ddd51c8dda6e1e8aa0d3ee65f49f76c9f7bde8235320ae81db2d9ed0e6ce32
           docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.49.0@sha256:78ddd51c8dda6e1e8aa0d3ee65f49f76c9f7bde8235320ae81db2d9ed0e6ce32 wkmx/tektoncd-pipeline-cmd-resolvers:v0.49.0
