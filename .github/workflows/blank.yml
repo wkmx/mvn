@@ -28,35 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          # docker pull gcr.io/cloud-builders/mvn@sha256:57523fc43394d6d9d2414ee8d1c85ed7a13460cbb268c3cd16d28cfb3859e641 #tag: latest
-          # docker tag gcr.io/cloud-builders/mvn@sha256:57523fc43394d6d9d2414ee8d1c85ed7a13460cbb268c3cd16d28cfb3859e641 wkmx/cloud-builders-mvn:latest
-          # docker pull registry.access.redhat.com/ubi8/ubi-minimal:8.2
-          # docker tag registry.access.redhat.com/ubi8/ubi-minimal:8.2 wkmx/ubi8-ubi-minimal:8.2
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.49.0@sha256:cde0654aab99ea19e030eb269f28deba6cc550910586ee7a832cae3ee63ea565
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.49.0@sha256:cde0654aab99ea19e030eb269f28deba6cc550910586ee7a832cae3ee63ea565 wkmx/tektoncd-pipeline-cmd-controller:v0.49.0
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.49.0@sha256:0e43b6ae2d517df85aac356b411fe291057c2f12aef3a949be961cfc1d31c158 
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.49.0@sha256:0e43b6ae2d517df85aac356b411fe291057c2f12aef3a949be961cfc1d31c158 wkmx/tektoncd-pipeline-cmd-entrypoint:v0.49.0
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.49.0@sha256:91eb79439e756e557259da3c0823f29483863ed6b8a409da664f879279c95d59 
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.49.0@sha256:91eb79439e756e557259da3c0823f29483863ed6b8a409da664f879279c95d59 wkmx/tektoncd-pipeline-cmd-nop:v0.49.0
-
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.49.0@sha256:4055c213dbb60722432c87b80fb8e52ed6409e6cbb83e62ebb53f0c6d33056f6 
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.49.0@sha256:4055c213dbb60722432c87b80fb8e52ed6409e6cbb83e62ebb53f0c6d33056f6 wkmx/tektoncd-pipeline-cmd-sidecarlogresults:v0.49.0
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.49.0@sha256:643cf8dbc46fbbfb9f333628c33bbdfb76d11b5005c2aaed28abdc20f739d0b8 
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.49.0@sha256:643cf8dbc46fbbfb9f333628c33bbdfb76d11b5005c2aaed28abdc20f739d0b8 wkmx/tektoncd-pipeline-cmd-workingdirinit:v0.49.0
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/events:v0.49.0@sha256:968999c9f4ba1003725a9455f9a3a2cba36766768e4f1ee40010fafa765f450d wkmx/tektoncd-pipeline-cmd-events:v0.49.0
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.49.0@sha256:78ddd51c8dda6e1e8aa0d3ee65f49f76c9f7bde8235320ae81db2d9ed0e6ce32
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.49.0@sha256:78ddd51c8dda6e1e8aa0d3ee65f49f76c9f7bde8235320ae81db2d9ed0e6ce32 wkmx/tektoncd-pipeline-cmd-resolvers:v0.49.0
-
-
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.49.0@sha256:df3be59025cc59dbcc639710a77f922f07b778de49616b59bb5343fbf7cc8b79
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.49.0@sha256:df3be59025cc59dbcc639710a77f922f07b778de49616b59bb5343fbf7cc8b79 wkmx/tektoncd-pipeline-cmd-webhook:v0.49.0
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.37.0@sha256:2f38f99b6eafc18e67d013da84265ab61b5525a1a6c37005aaf86152b586427b
+          docker tag gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.37.0@sha256:2f38f99b6eafc18e67d013da84265ab61b5525a1a6c37005aaf86152b586427b wkmx/tektoncd-dashboard-cmd-dashboard:v0.37.0
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -64,11 +37,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/tektoncd-pipeline-cmd-controller:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-entrypoint:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-nop:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-sidecarlogresults:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-workingdirinit:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-events:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-resolvers:v0.49.0
-          docker push wkmx/tektoncd-pipeline-cmd-webhook:v0.49.0
+          wkmx/tektoncd-dashboard-cmd-dashboard:v0.37.0
