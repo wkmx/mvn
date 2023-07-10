@@ -28,8 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.37.0@sha256:2f38f99b6eafc18e67d013da84265ab61b5525a1a6c37005aaf86152b586427b
-          docker tag gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.37.0@sha256:2f38f99b6eafc18e67d013da84265ab61b5525a1a6c37005aaf86152b586427b wkmx/tektoncd-dashboard-cmd-dashboard:v0.37.0
+          docker pull gcr.io/kaniko-project/executor:v1.5.1@sha256:c6166717f7fe0b7da44908c986137ecfeab21f31ec3992f6e128fff8a94be8a5
+          docker tag gcr.io/kaniko-project/executor:v1.5.1@sha256:c6166717f7fe0b7da44908c986137ecfeab21f31ec3992f6e128fff8a94be8a5 wkmx/kaniko-project-executor:v1.5.1
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -37,4 +37,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/tektoncd-dashboard-cmd-dashboard:v0.37.0
+          docker push wkmx/kaniko-project-executor:v1.5.1
