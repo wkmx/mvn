@@ -37,4 +37,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/kube-state-metrics:v2.10.1
+          docker push wkmx/prometheus-adapter:v0.11.2
