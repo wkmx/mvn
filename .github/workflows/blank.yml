@@ -28,77 +28,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:14.3.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-shell:v14.34.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.10.1
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-workhorse-ee:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.90.0-gitlab
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitaly:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0
-          docker pull registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.10.0
+          docker pull gcr.io/k8s-staging-ingressconformance/echoserver:v20221109-7ee2f3e
 
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.10.0 wkmx/gitlab-webservice-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.10.0 wkmx/kubectl:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:14.3.0 wkmx/gitlab-exporter:14.3.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-shell:v14.34.0 wkmx/gitlab-shell:v14.34.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.10.1 wkmx/gitlab-kas:v16.10.1
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee:v16.10.0 wkmx/gitlab-sidekiq-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee:v16.10.0 wkmx/gitlab-sidekiq-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.10.0 wkmx/gitlab-toolbox-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.10.0 wkmx/gitlab-webservice-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.10.0 wkmx/gitlab-webservice-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-workhorse-ee:v16.10.0 wkmx/gitlab-workhorse-ee:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.90.0-gitlab wkmx/gitlab-container-registry:v3.90.0-gitlab
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitaly:v16.10.0 wkmx/gitaly:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.10.0 wkmx/kubectl:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/certificates:v16.10.0 wkmx/certificates:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.10.0 wkmx/gitlab-base:v16.10.0
-          docker tag registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.10.0 wkmx/gitlab-toolbox-ee:v16.10.0
-
-
+          docker tag gcr.io/k8s-staging-ingressconformance/echoserver:v20221109-7ee2f3e wkmx/echoserver:v20221109-7ee2f3e
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -106,37 +38,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/gitlab-webservice-ee:v16.10.0
-          docker push wkmx/kubectl:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-exporter:14.3.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-shell:v14.34.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-kas:v16.10.1
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-sidekiq-ee:v16.10.0
-          docker push wkmx/gitlab-sidekiq-ee:v16.10.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-toolbox-ee:v16.10.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-webservice-ee:v16.10.0
-          docker push wkmx/gitlab-webservice-ee:v16.10.0
-          docker push wkmx/gitlab-workhorse-ee:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-container-registry:v3.90.0-gitlab
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitaly:v16.10.0
-          docker push wkmx/kubectl:v16.10.0
-          docker push wkmx/certificates:v16.10.0
-          docker push wkmx/gitlab-base:v16.10.0
-          docker push wkmx/gitlab-toolbox-ee:v16.10.0
+          docker push wkmx/echoserver:v20221109-7ee2f3e
