@@ -55,12 +55,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push zipkin-slim:2.23.14 
-          docker push skywalking-oap-server:9.1.0 
-          docker push skywalking-ui:9.1.0 
-          docker push jaegertracing/all-in-one:1.46 
-          docker push kiali:v1.79 
-          docker push grafana:10.1.5 
-          docker push loki:2.7.3 
-          docker push prometheus-config-reloader:v0.67.0 
-          docker push prometheus:v2.48.0 
+          docker push wkmx/zipkin-slim:2.23.14 
+          docker push wkmx/skywalking-oap-server:9.1.0 
+          docker push wkmx/skywalking-ui:9.1.0 
+          docker push wkmx/jaegertracing/all-in-one:1.46 
+          docker push wkmx/kiali:v1.79 
+          docker push wkmx/grafana:10.1.5 
+          docker push wkmx/loki:2.7.3 
+          docker push wkmx/prometheus-config-reloader:v0.67.0 
+          docker push wkmx/prometheus:v2.48.0 
