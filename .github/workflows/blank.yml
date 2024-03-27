@@ -28,9 +28,26 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker pull gcr.io/k8s-staging-ingressconformance/echoserver:v20221109-7ee2f3e
+          docker pull openzipkin/zipkin-slim:2.23.14
+          docker pull apache/skywalking-oap-server:9.1.0
+          docker pull apache/skywalking-ui:9.1.0
+          docker pull docker.io/jaegertracing/all-in-one:1.46
+          docker pull quay.io/kiali/kiali:v1.79
+          docker pull docker.io/grafana/grafana:10.1.5
+          docker pull docker.io/grafana/loki:2.7.3
+          docker pull ghcr.io/prometheus-operator/prometheus-config-reloader:v0.67.0
+          docker pull prom/prometheus:v2.48.0
 
-          docker tag gcr.io/k8s-staging-ingressconformance/echoserver:v20221109-7ee2f3e wkmx/echoserver:v20221109-7ee2f3e
+          docker tag openzipkin/zipkin-slim:2.23.14  wkmx/zipkin-slim:2.23.14 
+          docker tag apache/skywalking-oap-server:9.1.0  wkmx/skywalking-oap-server:9.1.0 
+          docker tag apache/skywalking-ui:9.1.0  wkmx/skywalking-ui:9.1.0 
+          docker tag docker.io/jaegertracing/all-in-one:1.46  wkmx/jaegertracing/all-in-one:1.46 
+          docker tag quay.io/kiali/kiali:v1.79  wkmx/kiali:v1.79 
+          docker tag docker.io/grafana/grafana:10.1.5  wkmx/grafana:10.1.5 
+          docker tag docker.io/grafana/loki:2.7.3  wkmx/loki:2.7.3 
+          docker tag ghcr.io/prometheus-operator/prometheus-config-reloader:v0.67.0  wkmx/prometheus-config-reloader:v0.67.0 
+          docker tag prom/prometheus:v2.48.0  wkmx/prometheus:v2.48.0 
+          
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -38,4 +55,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/echoserver:v20221109-7ee2f3e
+          docker push zipkin-slim:2.23.14 
+          docker push skywalking-oap-server:9.1.0 
+          docker push skywalking-ui:9.1.0 
+          docker push jaegertracing/all-in-one:1.46 
+          docker push kiali:v1.79 
+          docker push grafana:10.1.5 
+          docker push loki:2.7.3 
+          docker push prometheus-config-reloader:v0.67.0 
+          docker push prometheus:v2.48.0 
