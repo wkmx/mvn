@@ -41,7 +41,7 @@ jobs:
           docker tag openzipkin/zipkin-slim:2.23.14  wkmx/zipkin-slim:2.23.14 
           docker tag apache/skywalking-oap-server:9.1.0  wkmx/skywalking-oap-server:9.1.0 
           docker tag apache/skywalking-ui:9.1.0  wkmx/skywalking-ui:9.1.0 
-          docker tag docker.io/jaegertracing/all-in-one:1.46  wkmx/jaegertracing/all-in-one:1.46 
+          docker tag docker.io/jaegertracing/all-in-one:1.46  wkmx/all-in-one:1.46 
           docker tag quay.io/kiali/kiali:v1.79  wkmx/kiali:v1.79 
           docker tag docker.io/grafana/grafana:10.1.5  wkmx/grafana:10.1.5 
           docker tag docker.io/grafana/loki:2.7.3  wkmx/loki:2.7.3 
@@ -58,7 +58,7 @@ jobs:
           docker push wkmx/zipkin-slim:2.23.14 
           docker push wkmx/skywalking-oap-server:9.1.0 
           docker push wkmx/skywalking-ui:9.1.0 
-          docker push wkmx/jaegertracing/all-in-one:1.46 
+          docker push wkmx/all-in-one:1.46 
           docker push wkmx/kiali:v1.79 
           docker push wkmx/grafana:10.1.5 
           docker push wkmx/loki:2.7.3 
