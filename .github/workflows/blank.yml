@@ -28,25 +28,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker pull openzipkin/zipkin-slim:2.23.14
-          docker pull apache/skywalking-oap-server:9.1.0
-          docker pull apache/skywalking-ui:9.1.0
-          docker pull docker.io/jaegertracing/all-in-one:1.46
-          docker pull quay.io/kiali/kiali:v1.79
-          docker pull docker.io/grafana/grafana:10.1.5
-          docker pull docker.io/grafana/loki:2.7.3
-          docker pull ghcr.io/prometheus-operator/prometheus-config-reloader:v0.67.0
-          docker pull prom/prometheus:v2.48.0
+          docker pull quay.io/keycloak/keycloak:24.0.2
 
-          docker tag openzipkin/zipkin-slim:2.23.14  wkmx/zipkin-slim:2.23.14 
-          docker tag apache/skywalking-oap-server:9.1.0  wkmx/skywalking-oap-server:9.1.0 
-          docker tag apache/skywalking-ui:9.1.0  wkmx/skywalking-ui:9.1.0 
-          docker tag docker.io/jaegertracing/all-in-one:1.46  wkmx/all-in-one:1.46 
-          docker tag quay.io/kiali/kiali:v1.79  wkmx/kiali:v1.79 
-          docker tag docker.io/grafana/grafana:10.1.5  wkmx/grafana:10.1.5 
-          docker tag docker.io/grafana/loki:2.7.3  wkmx/loki:2.7.3 
-          docker tag ghcr.io/prometheus-operator/prometheus-config-reloader:v0.67.0  wkmx/prometheus-config-reloader:v0.67.0 
-          docker tag prom/prometheus:v2.48.0  wkmx/prometheus:v2.48.0 
+
+          docker tag quay.io/keycloak/keycloak:24.0.2  wkmx/keycloak:24.0.2
+
           
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
@@ -55,12 +41,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/zipkin-slim:2.23.14 
-          docker push wkmx/skywalking-oap-server:9.1.0 
-          docker push wkmx/skywalking-ui:9.1.0 
-          docker push wkmx/all-in-one:1.46 
-          docker push wkmx/kiali:v1.79 
-          docker push wkmx/grafana:10.1.5 
-          docker push wkmx/loki:2.7.3 
-          docker push wkmx/prometheus-config-reloader:v0.67.0 
-          docker push wkmx/prometheus:v2.48.0 
+          docker push wkmx/keycloak:24.0.2
