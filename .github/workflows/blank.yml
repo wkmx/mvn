@@ -28,10 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker pull quay.io/keycloak/keycloak:24.0.2
+          docker pull quay.io/kiwigrid/k8s-sidecar:1.19.2
 
 
-          docker tag quay.io/keycloak/keycloak:24.0.2  wkmx/keycloak:24.0.2
+          docker tag quay.io/kiwigrid/k8s-sidecar:1.19.2  wkmx/k8s-sidecar:1.19.2
 
           
       - name: Login in to Docker Hub
@@ -41,4 +41,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/keycloak:24.0.2
+          docker push wkmx/k8s-sidecar:1.19.2
