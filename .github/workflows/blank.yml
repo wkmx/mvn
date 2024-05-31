@@ -32,7 +32,7 @@ jobs:
           docker pull registry.k8s.io/ingress-nginx/opentelemetry:v20230721-3e2062ee5
           docker pull registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.1
           docker pull registry.k8s.io/defaultbackend-amd64:1.5
-          docker pull registry.k8s.io:busybox:latest
+          docker pull registry.k8s.io/busybox:latest
           
           
           docker tag registry.k8s.io/ingress-nginx/controller:v1.10.0  wkmx/ingress-nginx/controller:v1.10.0 
