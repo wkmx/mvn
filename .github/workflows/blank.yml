@@ -40,13 +40,15 @@ jobs:
           docker tag registry.k8s.io/defaultbackend-amd64:1.5  registry.cn-hangzhou.aliyuncs.com/wkmx/defaultbackend-amd64:1.5 
           docker tag registry.k8s.io/busybox:latest  registry.cn-hangzhou.aliyuncs.com/wkmx/busybox:latest 
           
-      - name: Login in to Docker Hub
+      - name: Login to ACR
         uses: aliyun/acr-login@v1
         with:
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
           login-server: https://registry.cn-hangzhou.aliyuncs.com
+          username: ${{ secrets.ACR_USERNAME }}
+          password:  ${{ secrets.ACR_PASSWORD }}
+
       - name: Push to Docker Registry
+        run: |
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-controller:v1.10.0 
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-opentelemetry:v20230721-3e2062ee5 
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1 
