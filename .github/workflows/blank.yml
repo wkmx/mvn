@@ -33,7 +33,7 @@ jobs:
 
       - name: Push to Docker Registry
         run: |
-          docker pull library/haproxy:2.9.6-alpine20
+          docker pull library/haproxy:2.9.6-alpine
           docker tag library/haproxy:2.9.6-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/haproxy:2.9.6-alpine
 
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/haproxy:2.9.6-alpine
