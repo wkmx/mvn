@@ -35,9 +35,9 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull kibana:7.16.3
+          docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           
-          docker tag kibana:7.16.3 registry.cn-hangzhou.aliyuncs.com/wkmx/kibana:7.16.3
+          docker tag quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z registry.cn-hangzhou.aliyuncs.com/wkmx/minio:RELEASE.2022-09-17T00-09-45Z
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/kibana:7.16.3
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/minio:RELEASE.2022-09-17T00-09-45Z
 
