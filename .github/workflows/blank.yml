@@ -33,7 +33,14 @@ jobs:
 
       - name: Push to Docker Registry
         run: |
-          docker pull library/haproxy:2.9.6-alpine
-          docker tag library/haproxy:2.9.6-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/haproxy:2.9.6-alpine
+      - name: Push to Docker Registry
+        run: |
+          docker pull registry.k8s.io/ingress-nginx/controller:v1.10.0
+          docker pull registry.k8s.io/ingress-nginx/kube-webhook-certgen/v1.4.1
+          
+          docker tag registry.k8s.io/ingress-nginx/controller:v1.10.0 registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-controller:v1.10.0
+          docker tag registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.1 registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/haproxy:2.9.6-alpine
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-controller:v1.10.0
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1
+
