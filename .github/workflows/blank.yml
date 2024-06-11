@@ -35,22 +35,24 @@ jobs:
           docker pull registry.k8s.io/busybox:latest
           
           
-          docker tag registry.k8s.io/ingress-nginx/controller:v1.10.0  wkmx/ingress-nginx-controller:v1.10.0 
-          docker tag registry.k8s.io/ingress-nginx/opentelemetry:v20230721-3e2062ee5  wkmx/ingress-nginx-opentelemetry:v20230721-3e2062ee5 
-          docker tag registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.1  wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1 
-          docker tag registry.k8s.io/defaultbackend-amd64:1.5  wkmx/defaultbackend-amd64:1.5 
-          docker tag registry.k8s.io/busybox:latest  wkmx/busybox:latest 
+          docker tag registry.k8s.io/ingress-nginx/controller:v1.10.0  registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-controller:v1.10.0 
+          docker tag registry.k8s.io/ingress-nginx/opentelemetry:v20230721-3e2062ee5  registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-opentelemetry:v20230721-3e2062ee5 
+          docker tag registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.1  registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1 
+          docker tag registry.k8s.io/defaultbackend-amd64:1.5  registry.cn-hangzhou.aliyuncs.com/wkmx/defaultbackend-amd64:1.5 
+          docker tag registry.k8s.io/busybox:latest  registry.cn-hangzhou.aliyuncs.com/wkmx/busybox:latest 
 
           
       - name: Login in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          # username: ${{ secrets.DOCKER_USERNAME }}
+          # password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
       - name: Push to Docker Registry
         run: |
-          docker push wkmx/ingress-nginx-controller:v1.10.0 
-          docker push wkmx/ingress-nginx-opentelemetry:v20230721-3e2062ee5 
-          docker push wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1 
-          docker push wkmx/defaultbackend-amd64:1.5 
-          docker push wkmx/busybox:latest 
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-controller:v1.10.0 
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-opentelemetry:v20230721-3e2062ee5 
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/ingress-nginx-kube-webhook-certgen:v1.4.1 
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/defaultbackend-amd64:1.5 
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/busybox:latest 
