@@ -33,23 +33,7 @@ jobs:
 
       - name: Push to Docker Registry
         run: |
-          docker pull calico/node:v3.27.3
-          docker pull calico/cni:v3.27.3
-          docker pull calico/cni:v3.27.3
-          docker pull calico/node:v3.27.3
-          docker pull kubesphere/kube-proxy:v1.28.8
-          docker pull kubesphere/k8s-dns-node-cache:1.22.20
+          docker pull library/haproxy:2.9.6-alpine20
+          docker tag library/haproxy:2.9.6-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/haproxy:2.9.6-alpine
 
-          docker tag calico/node:v3.27.3 registry.cn-hangzhou.aliyuncs.com/wkmx/calico-node:v3.27.3
-          docker tag calico/cni:v3.27.3 registry.cn-hangzhou.aliyuncs.com/wkmx/calico-cni:v3.27.3
-          docker tag calico/cni:v3.27.3 registry.cn-hangzhou.aliyuncs.com/wkmx/calico-cni:v3.27.3
-          docker tag calico/node:v3.27.3 registry.cn-hangzhou.aliyuncs.com/wkmx/calico-node:v3.27.3
-          docker tag kubesphere/kube-proxy:v1.28.8 registry.cn-hangzhou.aliyuncs.com/wkmx/kube-proxy:v1.28.8
-          docker tag kubesphere/k8s-dns-node-cache:1.22.20 registry.cn-hangzhou.aliyuncs.com/wkmx/k8s-dns-node-cache:1.22.20
-
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/calico-node:v3.27.3
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/calico-cni:v3.27.3
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/calico-cni:v3.27.3
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/calico-node:v3.27.3
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/kube-proxy:v1.28.8
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/k8s-dns-node-cache:1.22.20
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/haproxy:2.9.6-alpine
