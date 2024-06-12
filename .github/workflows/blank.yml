@@ -38,14 +38,11 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull kiwigrid/k8s-sidecar:1.24.3
-          docker pull grafana/loki:3.0.0
+          docker pull nginxinc/nginx-unprivileged:1.24-alpine
 
-          docker tag kiwigrid/k8s-sidecar:1.24.3 ${REGISTRY}/kiwigrid-k8s-sidecar:1.24.3
-          docker tag grafana/loki:3.0.0 ${REGISTRY}/grafana/loki:3.0.0
+          docker tag nginxinc/nginx-unprivileged:1.24-alpine ${REGISTRY}/nginx-unprivileged:1.24-alpine
           
           
 
-          docker push ${REGISTRY}/kiwigrid-k8s-sidecar:1.24.3 
-          docker push ${REGISTRY}/grafana/loki:3.0.0
+          docker push ${REGISTRY}/nginx-unprivileged:1.24-alpine
 
