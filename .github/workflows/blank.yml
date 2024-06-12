@@ -38,12 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull skywalking.docker.scarf.sh/apache/skywalking-oap-server:8.8.1
-          docker pull skywalking.docker.scarf.sh/apache/skywalking-ui:8.8.1
+          docker pull elasticsearch:7.8.1
 
-          docker tag skywalking.docker.scarf.sh/apache/skywalking-oap-server:8.8.1 ${REGISTRY}/skywalking-oap-server:8.8.1
-          docker tag skywalking.docker.scarf.sh/apache/skywalking-ui:8.8.1 ${REGISTRY}/skywalking-ui:8.8.1
+          docker tag elasticsearch:7.8.1 ${REGISTRY}/elasticsearch:7.8.1
 
-          docker push ${REGISTRY}/skywalking-oap-server:8.8.1
-          docker push ${REGISTRY}/skywalking-ui:8.8.1
+          docker push ${REGISTRY}/elasticsearch:7.8.1
 
