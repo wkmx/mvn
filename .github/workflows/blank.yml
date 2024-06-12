@@ -46,6 +46,6 @@ jobs:
           
           
 
-          docker push kiwigrid/k8s-sidecar:1.24.3 ${REGISTRY}/kiwigrid-k8s-sidecar:1.24.3 
-          docker push grafana/loki:3.0.0 ${REGISTRY}/grafana/loki:3.0.0
+          docker push ${REGISTRY}/kiwigrid-k8s-sidecar:1.24.3 
+          docker push ${REGISTRY}/grafana/loki:3.0.0
 
