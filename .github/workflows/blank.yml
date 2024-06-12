@@ -35,9 +35,16 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
-          
-          docker tag quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z registry.cn-hangzhou.aliyuncs.com/wkmx/minio:RELEASE.2022-09-17T00-09-45Z
+          # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
+          REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
+          docker pull prom/memcached-exporter:v0.14.2
+          docker pull memcached:1.6.23-alpine
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/minio:RELEASE.2022-09-17T00-09-45Z
+          docker tag prom/memcached-exporter:v0.14.2 ${REGISTRY}/memcached-exporter:v0.14.2
+          docker tag memcached:1.6.23-alpine  ${REGISTRY}/memcached:1.6.23-alpine
+          
+          
+
+          docker push ${REGISTRY}/memcached-exporter:v0.14.2
+          docker push ${REGISTRY}/memcached:1.6.23-alpine
 
