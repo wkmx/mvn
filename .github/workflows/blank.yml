@@ -37,14 +37,15 @@ jobs:
         run: |
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
-          docker pull prom/memcached-exporter:v0.14.2
-          docker pull memcached:1.6.23-alpine
 
-          docker tag prom/memcached-exporter:v0.14.2 ${REGISTRY}/memcached-exporter:v0.14.2
-          docker tag memcached:1.6.23-alpine  ${REGISTRY}/memcached:1.6.23-alpine
+          docker pull kiwigrid/k8s-sidecar:1.24.3
+          docker pull grafana/loki:3.0.0
+
+          docker tag kiwigrid/k8s-sidecar:1.24.3 ${REGISTRY}/kiwigrid-k8s-sidecar:1.24.3
+          docker tag grafana/loki:3.0.0 ${REGISTRY}/grafana/loki:3.0.0
           
           
 
-          docker push ${REGISTRY}/memcached-exporter:v0.14.2
-          docker push ${REGISTRY}/memcached:1.6.23-alpine
+          docker push kiwigrid/k8s-sidecar:1.24.3 ${REGISTRY}/kiwigrid-k8s-sidecar:1.24.3 
+          docker push grafana/loki:3.0.0 ${REGISTRY}/grafana/loki:3.0.0
 
