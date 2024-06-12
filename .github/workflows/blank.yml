@@ -38,14 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull apache/skywalking-oap-server:8.6.0-es7
-          docker pull apache/skywalking-ui:8.6.0
+          docker pull busybox:1.30
 
-          docker tag apache/skywalking-oap-server:8.6.0-es7 ${REGISTRY}/skywalking-oap-server:8.6.0-es7
-          docker tag apache/skywalking-ui:8.6.0 ${REGISTRY}/skywalking-ui:8.6.0
+          docker tag busybox:1.30 ${REGISTRY}/busybox:1.30
 
-          
-
-          docker push  ${REGISTRY}/skywalking-oap-server:8.6.0-es7
-          docker push  ${REGISTRY}/skywalking-ui:8.6.0
+          docker push ${REGISTRY}/busybox:1.30
 
