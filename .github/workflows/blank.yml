@@ -38,9 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull grafana/loki:3.0.0
+          docker pull grafana/promtail:2.9.3
 
-          docker tag grafana/loki:3.0.0 ${REGISTRY}/loki:3.0.0
+          docker tag grafana/promtail:2.9.3 ${REGISTRY}/promtail:2.9.3
 
-          docker push ${REGISTRY}/loki:3.0.0
+          docker push ${REGISTRY}/promtail:2.9.3
 
