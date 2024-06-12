@@ -42,7 +42,7 @@ jobs:
           docker pull apache/skywalking-ui:8.6.0
 
           docker tag apache/skywalking-oap-server:8.6.0-es7 ${REGISTRY}/skywalking-oap-server:8.6.0-es7
-          docker tag apache/apache/skywalking-ui:8.6.0 ${REGISTRY}/skywalking-ui:8.6.0
+          docker tag apache/skywalking-ui:8.6.0 ${REGISTRY}/skywalking-ui:8.6.0
 
           
 
