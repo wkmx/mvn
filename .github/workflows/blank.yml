@@ -38,13 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull apacherocketmq/rocketmq-dashboard:1.0.0
-          docker pull apache/rocketmq:4.9.7
+          docker pull bitnami/redis:6.2.7-debian-11-r11
 
-          docker tag apacherocketmq/rocketmq-dashboard:1.0.0 ${REGISTRY}/rocketmq-dashboard:1.0.0
-          docker tag apache/rocketmq:4.9.7 ${REGISTRY}/rocketmq:4.9.7
+          docker tag bitnami/redis:6.2.7-debian-11-r11 ${REGISTRY}/redis:6.2.7-debian-11-r11
 
-          docker push ${REGISTRY}/rocketmq:4.9.7
-          docker push ${REGISTRY}/rocketmq-dashboard:1.0.0
+          docker push ${REGISTRY}/redis:6.2.7-debian-11-r11
 
 
