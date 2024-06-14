@@ -38,10 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull bitnami/redis-exporter:1.43.0-debian-11-r4
+          docker pull node:20-slim
 
-          docker tag bitnami/redis-exporter:1.43.0-debian-11-r4 ${REGISTRY}/redis-exporter:1.43.0-debian-11-r4
+          docker tag node:20-slim ${REGISTRY}/node:20-slim
 
-          docker push ${REGISTRY}/redis-exporter:1.43.0-debian-11-r4
+          docker push ${REGISTRY}/node:20-slim
 
 
