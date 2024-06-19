@@ -38,10 +38,13 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull node:20-slim
+          docker pull docker.io/bitnami/postgresql:15.3.0-debian-11-r24
+          docker pull docker.io/bitnami/postgres-exporter:0.13.1-debian-11-r5
 
-          docker tag node:20-slim ${REGISTRY}/node:20-slim
+          docker tag docker.io/bitnami/postgresql:15.3.0-debian-11-r24 ${REGISTRY}/postgresql:15.3.0-debian-11-r24
+          docker tag docker.io/bitnami/postgres-exporter:0.13.1-debian-11-r5 ${REGISTRY}/postgres-exporter:0.13.1-debian-11-r5 
 
-          docker push ${REGISTRY}/node:20-slim
+          docker push ${REGISTRY}/postgresql:15.3.0-debian-11-r24
+          docker push ${REGISTRY}/postgres-exporter:0.13.1-debian-11-r5 
 
 
