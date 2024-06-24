@@ -38,11 +38,11 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull kong:3.6
+          docker pull canal/canal-server:v1.1.5
 
-          docker tag  kong:3.6 ${REGISTRY}/kong:3.6
+          docker tag  canal/canal-server:v1.1.5 ${REGISTRY}/canal-server:v1.1.5
 
-          docker push ${REGISTRY}/kong:3.6
+          docker push ${REGISTRY}/canal-server:v1.1.5
 
 
 
