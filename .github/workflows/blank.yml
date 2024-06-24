@@ -49,7 +49,7 @@ jobs:
           
           docker push ${REGISTRY}/busybox:1.30
           docker push ${REGISTRY}/skywalking-oap-server:8.8.1
-docker push ${REGISTRY}/skywalking-ui:8.8.1
+          docker push ${REGISTRY}/skywalking-ui:8.8.1
 
 
 
