@@ -37,13 +37,19 @@ jobs:
         run: |
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
-
-          docker pull surnet/alpine-wkhtmltopdf:3.16.2-0.12.6-full
-
-          docker tag  surnet/alpine-wkhtmltopdf:3.16.2-0.12.6-full ${REGISTRY}/alpine-wkhtmltopdf:3.16.2-0.12.6-full
-
-          docker push ${REGISTRY}/alpine-wkhtmltopdf:3.16.2-0.12.6-full
-
+          
+          docker pull busybox:1.30
+          docker pull skywalking.docker.scarf.sh/apache/skywalking-oap-server:8.8.1
+          docker pull skywalking.docker.scarf.sh/apache/skywalking-ui:8.8.1
+          
+          
+          docker tag busybox:1.30  ${REGISTRY}/busybox:1.30
+          docker tag skywalking.docker.scarf.sh/apache/skywalking-oap-server:8.8.1 ${REGISTRY}/skywalking-oap-server:8.8.1
+          docker tag skywalking.docker.scarf.sh/apache/skywalking-ui:8.8.1 ${REGISTRY}/skywalking-ui:8.8.1
+          
+          docker push ${REGISTRY}/busybox:1.30
+          docker push ${REGISTRY}/skywalking-oap-server:8.8.1
+docker push ${REGISTRY}/skywalking-ui:8.8.1
 
 
 
