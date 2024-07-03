@@ -44,8 +44,6 @@ jobs:
           docker pull apache/apisix-ingress-controller:1.8.0
           docker pull docker.io/bitnami/etcd:3.5.10-debian-11-r2
           
-          docker tag golang:1.20.8-alpine  ${REGISTRY}/golang:1.20.8-alpine
-
           docker tag apache/apisix:3.9.1-debian ${REGISTRY}/apisix:3.9.1-debian
           docker tag busybox:1.28 ${REGISTRY}/busybox:1.28
           docker tag apache/apisix-dashboard:3.0.0-alpine ${REGISTRY}/apisix-dashboard:3.0.0-alpine
