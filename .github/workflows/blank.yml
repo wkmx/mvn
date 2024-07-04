@@ -38,10 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
           
-          docker pull node:20.15.0
+          docker pull node:18.20.2
           
-          docker tag node:20.15.0 ${REGISTRY}/node:20.15.0
+          docker tag node:18.20.2 ${REGISTRY}/node:18.20.2
           
-          docker push ${REGISTRY}/node:20.15.0
+          docker push ${REGISTRY}/node:18.20.2
 
 
