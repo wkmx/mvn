@@ -41,7 +41,7 @@ jobs:
           docker pull node:20.15.0-alpine
           
           docker tag node:20.15.0-alpin ${REGISTRY}/node:20.15.0-alpine
-  
+          
           docker push ${REGISTRY}/node:20.15.0-alpine
 
 
