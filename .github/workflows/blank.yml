@@ -38,22 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
           
-          docker pull apache/apisix:3.9.1-debian
-          docker pull busybox:1.28
-          docker pull apache/apisix-dashboard:3.0.0-alpine
-          docker pull apache/apisix-ingress-controller:1.8.0
-          docker pull docker.io/bitnami/etcd:3.5.10-debian-11-r2
+          docker pull node:20.15.0-alpine
           
-          docker tag apache/apisix:3.9.1-debian ${REGISTRY}/apisix:3.9.1-debian
-          docker tag busybox:1.28 ${REGISTRY}/busybox:1.28
-          docker tag apache/apisix-dashboard:3.0.0-alpine ${REGISTRY}/apisix-dashboard:3.0.0-alpine
-          docker tag apache/apisix-ingress-controller:1.8.0 ${REGISTRY}/apisix-ingress-controller:1.8.0
-          docker tag docker.io/bitnami/etcd:3.5.10-debian-11-r2 ${REGISTRY}/etcd:3.5.10-debian-11-r2
-      
-          docker push ${REGISTRY}/apisix:3.9.1-debian
-          docker push ${REGISTRY}/busybox:1.28
-          docker push ${REGISTRY}/apisix-dashboard:3.0.0-alpine
-          docker push ${REGISTRY}/apisix-ingress-controller:1.8.0
-          docker push ${REGISTRY}/etcd:3.5.10-debian-11-r2
+          docker tag node:20.15.0-alpin ${REGISTRY}/node:20.15.0-alpine
+  
+          docker push ${REGISTRY}/node:20.15.0-alpine
 
 
