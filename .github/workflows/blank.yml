@@ -38,10 +38,19 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull bitnami/apisix:3.9.1-debian-12-r5
+          docker pull bitnami/apisix-dashboard:3.0.1-debian-12-r36
+          docker pull bitnami/os-shell:12-debian-12-r24
+          docker pull bitnami/etcd:3.5.14-debian-12-r1
+          docker pull bitnami/apisix-ingress-controller:1.8.2-debian-12-r8
           
-          docker tag bitnami/apisix:3.9.1-debian-12-r5 ${REGISTRY}/apisix:3.9.1-debian-12-r5
+          docker tag bitnami/apisix-dashboard:3.0.1-debian-12-r36 ${REGISTRY}/apisix-dashboard:3.0.1-debian-12-r36
+          docker tag bitnami/os-shell:12-debian-12-r24 ${REGISTRY}/os-shell:12-debian-12-r24
+          docker tag bitnami/etcd:3.5.14-debian-12-r1 ${REGISTRY}/etcd:3.5.14-debian-12-r1
+          docker tag bitnami/apisix-ingress-controller:1.8.2-debian-12-r8 ${REGISTRY}/apisix-ingress-controller:1.8.2-debian-12-r8
           
-          docker push ${REGISTRY}/apisix:3.9.1-debian-12-r5
+          docker push ${REGISTRY}/apisix-dashboard:3.0.1-debian-12-r36
+          docker push ${REGISTRY}/os-shell:12-debian-12-r24
+          docker push ${REGISTRY}/etcd:3.5.14-debian-12-r1
+          docker push ${REGISTRY}/apisix-ingress-controller:1.8.2-debian-12-r8
 
 
