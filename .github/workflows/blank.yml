@@ -38,11 +38,11 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull styletang/rocketmq-console-ng:1.0.0
+          docker pull golang:alpine
           
-          docker tag styletang/rocketmq-console-ng:1.0.0 ${REGISTRY}/rocketmq-console-ng:1.0.0
+          docker tag golang:alpine ${REGISTRY}/golang:alpine
 
-          docker push ${REGISTRY}/rocketmq-console-ng:1.0.0
+          docker push ${REGISTRY}/golang:alpine
 
 
 
