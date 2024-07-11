@@ -38,11 +38,11 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull golang:alpine
+          docker pull mysql:8.0.38
           
-          docker tag golang:alpine ${REGISTRY}/golang:alpine
+          docker tag mysql:8.0.38 ${REGISTRY}/mysql:8.0.38
 
-          docker push ${REGISTRY}/golang:alpine
+          docker push ${REGISTRY}/mysql:8.0.38
 
 
 
