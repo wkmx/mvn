@@ -38,13 +38,14 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull apacherocketmq/rocketmq-console:2.0.0
+          docker pull gguilin/rocketmq-console-ng:2.0.0
+
 
           
 
-          docker tag apacherocketmq/rocketmq-console:2.0.0 ${REGISTRY}/rocketmq-console:2.0.0
+          docker tag gguilin/rocketmq-console-ng:2.0.0 ${REGISTRY}/rocketmq-console-ng:2.0.0
 
-          docker push ${REGISTRY}/rocketmq-console:2.0.0
+          docker push ${REGISTRY}/rocketmq-console-ng:2.0.0
 
 
 
