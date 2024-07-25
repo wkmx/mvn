@@ -38,14 +38,14 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull gguilin/rocketmq-console-ng:2.0.0
+          docker pull snipe/snipe-it:v7.0.9
+          docker pull mariadb:11.3.2-jammy
 
+          docker tag snipe/snipe-it:v7.0.9 ${REGISTRY}/snipe-it:v7.0.9
+          docker tag mariadb:11.3.2-jammy ${REGISTRY}/mariadb:11.3.2-jammy
 
-          
-
-          docker tag gguilin/rocketmq-console-ng:2.0.0 ${REGISTRY}/rocketmq-console-ng:2.0.0
-
-          docker push ${REGISTRY}/rocketmq-console-ng:2.0.0
+          docker push ${REGISTRY}/snipe-it:v7.0.9
+          docker push ${REGISTRY}/mariadb:11.3.2-jammy
 
 
 
