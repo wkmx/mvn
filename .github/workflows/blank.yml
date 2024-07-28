@@ -38,11 +38,11 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull wordpress:5.8.1-php8.0-fpm
+          docker pull wordpress:6.6.1-php8.1-fpm
           
-          docker tag wordpress:5.8.1-php8.0-fpm ${REGISTRY}/wordpress:5.8.1-php8.0-fpm
+          docker tag wordpress:6.6.1-php8.1-fpm ${REGISTRY}/wordpress:6.6.1-php8.1-fpm
 
-          docker push ${REGISTRY}/wordpress:5.8.1-php8.0-fpm
+          docker push ${REGISTRY}/wordpress:6.6.1-php8.1-fpm
 
 
 
