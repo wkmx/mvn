@@ -38,14 +38,11 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull snipe/snipe-it:v7.0.9
-          docker pull mariadb:11.3.2-jammy
+          docker pull wordpress:5.8.1-php8.0-fpm
+          
+          docker tag wordpress:5.8.1-php8.0-fpm ${REGISTRY}/wordpress:5.8.1-php8.0-fpm
 
-          docker tag snipe/snipe-it:v7.0.9 ${REGISTRY}/snipe-it:v7.0.9
-          docker tag mariadb:11.3.2-jammy ${REGISTRY}/mariadb:11.3.2-jammy
-
-          docker push ${REGISTRY}/snipe-it:v7.0.9
-          docker push ${REGISTRY}/mariadb:11.3.2-jammy
+          docker push ${REGISTRY}/wordpress:5.8.1-php8.0-fpm
 
 
 
