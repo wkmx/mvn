@@ -39,10 +39,38 @@ jobs:
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
           docker pull mysql:8.1.0
-          
-          docker tag mysql:8.1.0 ${REGISTRY}/mysql:8.1.0
+          docker pull quay.io/prometheus/node-exporter:v1.7.0
+          docker pull "docker.io/library/busybox:1.31.1"
+          docker pull "quay.io/kiwigrid/k8s-sidecar:1.25.2"
+          docker pull "quay.io/kiwigrid/k8s-sidecar:1.25.2"
+          docker pull "docker.io/grafana/grafana:10.2.3"
+          docker pull docker.io/wkmx/kube-state-metrics:v2.10.1
+          docker pull "quay.io/prometheus-operator/prometheus-operator:v0.70.0"
+          docker pull "quay.io/prometheus/alertmanager:v0.26.0"
+          docker pull "quay.io/prometheus/prometheus:v2.48.1"
+          docker pull "docker.io/bats/bats:v1.4.1"
+          docker pull docker.io/wkmx/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6
 
-          docker push ${REGISTRY}/mysql:8.1.0
+          docker tag quay.io/prometheus/node-exporter:v1.7.0 ${REGISTRY}/node-exporter:v1.7.0
+          docker tag "docker.io/library/busybox:1.31.1" ${REGISTRY}/busybox:1.31.1
+          docker tag "quay.io/kiwigrid/k8s-sidecar:1.25.2" ${REGISTRY}/k8s-sidecar:1.25.2
+          docker tag "docker.io/grafana/grafana:10.2.3" ${REGISTRY}/grafana:10.2.3
+          docker tag docker.io/wkmx/kube-state-metrics:v2.10.1 ${REGISTRY}/kube-state-metrics:v2.10.1
+          docker tag "quay.io/prometheus-operator/prometheus-operator:v0.70.0" ${REGISTRY}/prometheus-operator:v0.70.0
+          docker tag "quay.io/prometheus/alertmanager:v0.26.0" ${REGISTRY}/alertmanager:v0.26.0
+          docker tag "quay.io/prometheus/prometheus:v2.48.1" ${REGISTRY}/prometheus:v2.48.1
+          docker tag "docker.io/bats/bats:v1.4.1" ${REGISTRY}/bats:v1.4.1
+          docker tag docker.io/wkmx/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6 ${REGISTRY}/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6
 
+          docker push ${REGISTRY}/node-exporter:v1.7.0
+          docker push ${REGISTRY}/busybox:1.31.1
+          docker push ${REGISTRY}/k8s-sidecar:1.25.2
+          docker push ${REGISTRY}/grafana:10.2.3
+          docker push ${REGISTRY}/kube-state-metrics:v2.10.1
+          docker push ${REGISTRY}/prometheus-operator:v0.70.0
+          docker push ${REGISTRY}/alertmanager:v0.26.0
+          docker push ${REGISTRY}/prometheus:v2.48.1
+          docker push ${REGISTRY}/bats:v1.4.1
+          docker push ${REGISTRY}/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6
 
 
