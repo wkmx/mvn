@@ -38,10 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull python:3.11.9-alpine
+          docker pull grafana/promtail:2.9.2
 
-          docker tag python:3.11.9-alpine ${REGISTRY}/python:3.11.9-alpine
+          docker tag grafana/promtail:2.9.2 ${REGISTRY}/promtail:2.9.2
           
-          docker push ${REGISTRY}/python:3.11.9-alpine
+          docker push ${REGISTRY}/promtail:2.9.2
 
 
