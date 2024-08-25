@@ -38,10 +38,40 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull grafana/promtail:2.9.2
-
-          docker tag grafana/promtail:2.9.2 ${REGISTRY}/promtail:2.9.2
+          docker pull calico/cni:v3.23.2
+          docker pull calico/kube-controllers:v3.23.2
+          docker pull calico/node:v3.23.2
+          docker pull calico/pod2daemon-flexvol:v3.23.2
+          docker pull coredns/coredns:1.8.0
+          docker pull kubesphere/k8s-dns-node-cache:1.15.12
+          docker pull kubesphere/kube-apiserver:v1.21.5
+          docker pull kubesphere/kube-controller-manager:v1.21.5
+          docker pull kubesphere/kube-proxy:v1.21.5
+          docker pull kubesphere/kube-scheduler:v1.21.5
+          docker pull kubesphere/pause:3.4.1
           
-          docker push ${REGISTRY}/promtail:2.9.2
-
+          
+          docker tag calico/cni:v3.23.2 ${REGISTRY}/cni:v3.23.2
+          docker tag calico/kube-controllers:v3.23.2 ${REGISTRY}/kube-controllers:v3.23.2
+          docker tag calico/node:v3.23.2 ${REGISTRY}/node:v3.23.2
+          docker tag calico/pod2daemon-flexvol:v3.23.2 ${REGISTRY}/pod2daemon-flexvol:v3.23.2
+          docker tag coredns/coredns:1.8.0 coredns/coredns:1.8.0
+          docker tag kubesphere/k8s-dns-node-cache:1.15.12 ${REGISTRY}/k8s-dns-node-cache:1.15.12
+          docker tag kubesphere/kube-apiserver:v1.21.5 ${REGISTRY}/kube-apiserver:v1.21.5
+          docker tag kubesphere/kube-controller-manager:v1.21.5 ${REGISTRY}/kube-controller-manager:v1.21.5
+          docker tag kubesphere/kube-proxy:v1.21.5 ${REGISTRY}/kube-proxy:v1.21.5
+          docker tag kubesphere/kube-scheduler:v1.21.5 ${REGISTRY}/kube-scheduler:v1.21.5
+          docker tag kubesphere/pause:3.4.1 ${REGISTRY}/pause:3.4.1
+          
+          
+          docker push ${REGISTRY}/cni:v3.23.2
+          docker push ${REGISTRY}/kube-controllers:v3.23.2
+          docker push ${REGISTRY}/node:v3.23.2
+          docker push ${REGISTRY}/pod2daemon-flexvol:v3.23.2
+          docker push ${REGISTRY}/k8s-dns-node-cache:1.15.12
+          docker push ${REGISTRY}/kube-apiserver:v1.21.5
+          docker push ${REGISTRY}/kube-controller-manager:v1.21.5
+          docker push ${REGISTRY}/kube-proxy:v1.21.5
+          docker push ${REGISTRY}/kube-scheduler:v1.21.5
+          docker push ${REGISTRY}/pause:3.4.1
 
