@@ -38,9 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull kubesphere/kube-proxy
+          docker pull kubesphere/kube-proxy:v1.29.3
 
-          docker tag kubesphere/kube-proxy ${REGISTRY}/kube-proxy:v1.29.3
+          docker tag kubesphere/kube-proxy:v1.29.3 ${REGISTRY}/kube-proxy:v1.29.3
 
           docker push ${REGISTRY}/kube-proxy:v1.29.3
 
