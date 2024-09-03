@@ -38,9 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull jenkins/jenkins:2.460-jdk17
+          docker pull jenkins/jenkins:2.474-jdk17
 
-          docker tag jenkins/jenkins:2.460-jdk17 ${REGISTRY}/jenkins:2.460-jdk17
+          docker tag jenkins/jenkins:2.474-jdk17 ${REGISTRY}/jenkins:2.474-jdk17
 
-          docker push ${REGISTRY}/jenkins:2.460-jdk17
+          docker push ${REGISTRY}/jenkins:2.474-jdk17
 
