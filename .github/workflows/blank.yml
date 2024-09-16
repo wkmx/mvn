@@ -38,9 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull sujaykumarh/docsify:latest
+          docker pull zookeeper:3.9.2-debian-12-r12
 
-          docker tag sujaykumarh/docsify:latest ${REGISTRY}/docsify:latest
+          docker tag zookeeper:3.9.2-debian-12-r12 ${REGISTRY}/zookeeper:3.9.2-debian-12-r12
 
-          docker push ${REGISTRY}/docsify:latest
+          docker push ${REGISTRY}/zookeeper:3.9.2-debian-12-r12
 
