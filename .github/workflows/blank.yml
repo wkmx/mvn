@@ -38,9 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull python/3.12.6-alpine3.20
+          docker pull python:3.12.6-alpine3.20
 
-          docker tag python/3.12.6-alpine3.20 ${REGISTRY}/python/3.12.6-alpine3.20
+          docker tag python:3.12.6-alpine3.20 ${REGISTRY}/python:3.12.6-alpine3.20
 
-          docker push ${REGISTRY}/python/3.12.6-alpine3.20
+          docker push ${REGISTRY}/python:3.12.6-alpine3.20
 
