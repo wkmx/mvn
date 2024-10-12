@@ -38,9 +38,9 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
 
-          docker pull eipwork/kuboard:latest
+          docker pull alpine:3.18.9
 
-          docker tag eipwork/kuboard:latest ${REGISTRY}/kuboard:v2-latest
+          docker tag alpine:3.18.9 ${REGISTRY}/alpine:3.18.9
 
-          docker push ${REGISTRY}/kuboard:v2-latest
+          docker push ${REGISTRY}/alpine:3.18.9
 
