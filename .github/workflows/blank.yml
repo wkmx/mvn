@@ -42,9 +42,9 @@ jobs:
           docker pull calico/cni:v3.27.3
 
           
-          docker tag calico/node:v3.27.3 ${REGISTRY}/node:v3.27
+          docker tag calico/node:v3.27.3 ${REGISTRY}/node:v3.27.3
           docker tag calico/cni:v3.27.3 ${REGISTRY}/cni:v3.27.3
 
-          docker push ${REGISTRY}/node:v3.27
+          docker push ${REGISTRY}/node:v3.27.3
           docker push ${REGISTRY}/cni:v3.27.3
 
