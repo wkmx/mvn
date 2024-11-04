@@ -38,21 +38,13 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
           
-          docker pull docker.io/kubesphere/pause:3.9
-          docker pull docker.io/kubesphere/kube-apiserver:v1.28.8
-          docker pull docker.io/kubesphere/kube-controller-manager:v1.28.8
-          docker pull docker.io/kubesphere/kube-scheduler:v1.28.8
-          docker pull docker.io/kubesphere/kube-proxy:v1.28.8
+          docker pull calico/node:v3.27.3
+          docker pull calico/cni:v3.27.3
+
           
-          
-          docker tag docker.io/kubesphere/pause:3.9 ${REGISTRY}/pause:3.9
-          docker tag docker.io/kubesphere/kube-apiserver:v1.28.8 ${REGISTRY}/kube-apiserver:v1.28.8
-          docker tag docker.io/kubesphere/kube-controller-manager:v1.28.8 ${REGISTRY}/kube-controller-manager:v1.28.8
-          docker tag docker.io/kubesphere/kube-scheduler:v1.28.8 ${REGISTRY}/kube-scheduler:v1.28.8
-          docker tag docker.io/kubesphere/kube-proxy:v1.28.8 ${REGISTRY}/kube-proxy:v1.28.8
-          
-          docker push ${REGISTRY}/pause:3.9
-          docker push ${REGISTRY}/kube-apiserver:v1.28.8
-          docker push ${REGISTRY}/kube-controller-manager:v1.28.8
-          docker push ${REGISTRY}/kube-scheduler:v1.28.8
-          docker push ${REGISTRY}/kube-proxy:v1.28.8
+          docker tag calico/node:v3.27.3 ${REGISTRY}/node:v3.27
+          docker tag calico/cni:v3.27.3 ${REGISTRY}/cni:v3.27.3
+
+          docker push ${REGISTRY}/node:v3.27
+          docker push ${REGISTRY}/cni:v3.27.3
+
