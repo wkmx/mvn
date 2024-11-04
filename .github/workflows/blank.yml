@@ -38,13 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
           
-          docker pull calico/node:v3.27.3
-          docker pull calico/cni:v3.27.3
+          docker pull coredns/coredns:1.9.3
 
           
-          docker tag calico/node:v3.27.3 ${REGISTRY}/node:v3.27.3
-          docker tag calico/cni:v3.27.3 ${REGISTRY}/cni:v3.27.3
+          docker tag coredns/coredns:1.9.3 ${REGISTRY}/coredns:1.9.3
 
-          docker push ${REGISTRY}/node:v3.27.3
-          docker push ${REGISTRY}/cni:v3.27.3
+          docker push ${REGISTRY}/coredns:1.9.3
 
