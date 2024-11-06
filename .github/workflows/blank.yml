@@ -38,10 +38,10 @@ jobs:
           # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
           REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
           
-          docker pull golang:1.20.8-alpine
+          docker pull grafana/loki-canary:3.0.0
 
           
-          docker tag golang:1.20.8-alpine ${REGISTRY}/golang:1.20.8-alpine
+          docker tag grafana/loki-canary:3.0.0 ${REGISTRY}/loki-canary:3.0.0
 
-          docker push ${REGISTRY}/golang:1.20.8-alpine
+          docker push ${REGISTRY}/loki-canary:3.0.0
 
