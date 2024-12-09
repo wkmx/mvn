@@ -47,9 +47,9 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull zookeeper:3.9.3
+          docker pull mysql:5.7.44
 
-          docker tag zookeeper:3.9.3	registry.cn-hangzhou.aliyuncs.com/wkmx/zookeeper:3.9.3
+          docker tag mysql:5.7.44	registry.cn-hangzhou.aliyuncs.com/wkmx/mysql:5.7.44
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/zookeeper:3.9.3
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/mysql:5.7.44
 
