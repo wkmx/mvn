@@ -27,8 +27,8 @@ jobs:
       - name: Login to ACR
         uses: aliyun/acr-login@v1
         with:
-          # login-server: https://registry.cn-hangzhou.aliyuncs.com
-          login-server: https://registry.us-west-1.aliyuncs.com
+          login-server: https://registry.cn-hangzhou.aliyuncs.com
+          # login-server: https://registry.us-west-1.aliyuncs.com
           username: ${{ secrets.ACR_USERNAME }}
           password:  ${{ secrets.ACR_PASSWORD }}
 
