@@ -46,50 +46,10 @@ jobs:
 
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
+          
+          docker pull zookeeper:3.9.3
 
-          
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/cni:v3.27.3
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/coredns:1.9.3
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/k8s-dns-node-cache:1.22.20
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/kube-apiserver:v1.28.8
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/kube-controller-manager:v1.28.8
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/kube-controllers:v3.27.3
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/kube-proxy:v1.28.8
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/kube-scheduler:v1.28.8
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/nacos-peer-finder-plugin:1.1
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/nacos-server:v2.2.0
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/node-exporter:v1.7.0
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/node:v3.27.3
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/pause:3.9
-          docker pull registry.cn-hangzhou.aliyuncs.com/wkmx/promtail:2.9.3
-          
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/cni:v3.27.3	registry.us-west-1.aliyuncs.com/wkmx/cni:v3.27.3
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/coredns:1.9.3	registry.us-west-1.aliyuncs.com/wkmx/coredns:1.9.3
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/k8s-dns-node-cache:1.22.20	registry.us-west-1.aliyuncs.com/wkmx/k8s-dns-node-cache:1.22.20
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/kube-apiserver:v1.28.8	registry.us-west-1.aliyuncs.com/wkmx/kube-apiserver:v1.28.8
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/kube-controller-manager:v1.28.8	registry.us-west-1.aliyuncs.com/wkmx/kube-controller-manager:v1.28.8
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/kube-controllers:v3.27.3	registry.us-west-1.aliyuncs.com/wkmx/kube-controllers:v3.27.3
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/kube-proxy:v1.28.8	registry.us-west-1.aliyuncs.com/wkmx/kube-proxy:v1.28.8
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/kube-scheduler:v1.28.8	registry.us-west-1.aliyuncs.com/wkmx/kube-scheduler:v1.28.8
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/nacos-peer-finder-plugin:1.1	registry.us-west-1.aliyuncs.com/wkmx/nacos-peer-finder-plugin:1.1
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/nacos-server:v2.2.0	registry.us-west-1.aliyuncs.com/wkmx/nacos-server:v2.2.0
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/node-exporter:v1.7.0	registry.us-west-1.aliyuncs.com/wkmx/node-exporter:v1.7.0
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/node:v3.27.3	registry.us-west-1.aliyuncs.com/wkmx/node:v3.27.3
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/pause:3.9	registry.us-west-1.aliyuncs.com/wkmx/pause:3.9
-          docker tag registry.cn-hangzhou.aliyuncs.com/wkmx/promtail:2.9.3	registry.us-west-1.aliyuncs.com/wkmx/promtail:2.9.3
-          
-          
-          docker push registry.us-west-1.aliyuncs.com/wkmx/cni:v3.27.3
-          docker push registry.us-west-1.aliyuncs.com/wkmx/coredns:1.9.3
-          docker push registry.us-west-1.aliyuncs.com/wkmx/k8s-dns-node-cache:1.22.20
-          docker push registry.us-west-1.aliyuncs.com/wkmx/kube-apiserver:v1.28.8
-          docker push registry.us-west-1.aliyuncs.com/wkmx/kube-controller-manager:v1.28.8
-          docker push registry.us-west-1.aliyuncs.com/wkmx/kube-controllers:v3.27.3
-          docker push registry.us-west-1.aliyuncs.com/wkmx/kube-proxy:v1.28.8
-          docker push registry.us-west-1.aliyuncs.com/wkmx/kube-scheduler:v1.28.8
-          docker push registry.us-west-1.aliyuncs.com/wkmx/nacos-peer-finder-plugin:1.1
-          docker push registry.us-west-1.aliyuncs.com/wkmx/nacos-server:v2.2.0
-          docker push registry.us-west-1.aliyuncs.com/wkmx/node-exporter:v1.7.0
-          docker push registry.us-west-1.aliyuncs.com/wkmx/node:v3.27.3
-          docker push registry.us-west-1.aliyuncs.com/wkmx/pause:3.9
-          docker push registry.us-west-1.aliyuncs.com/wkmx/promtail:2.9.3
+          docker tag zookeeper:3.9.3	registry.cn-hangzhou.aliyuncs.com/wkmx/zookeeper:3.9.3
+
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/zookeeper:3.9.3
+
