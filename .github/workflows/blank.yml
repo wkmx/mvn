@@ -47,9 +47,9 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull mysql:5.7.44
+          docker pull openjdk:8-jdk
 
-          docker tag mysql:5.7.44	registry.cn-hangzhou.aliyuncs.com/wkmx/mysql:5.7.44
+          docker tag openjdk:8-jdk registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk:8-jdk
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/mysql:5.7.44
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk:8-jdk
 
