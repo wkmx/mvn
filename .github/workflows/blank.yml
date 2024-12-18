@@ -47,9 +47,9 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull openjdk:8-jdk
+          docker pull busybox:1.28.4
 
-          docker tag openjdk:8-jdk registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk:8-jdk
+          docker tag busybox:1.28.4 registry.cn-hangzhou.aliyuncs.com/wkmx/busybox:1.28.4
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk:8-jdk
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/busybox:1.28.4
 
