@@ -47,10 +47,10 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull xuxueli/xxl-job-admin:2.2.0
+          docker pull python:3.7.17-alpine3.18
 
-          docker tag xuxueli/xxl-job-admin:2.2.0 registry.cn-hangzhou.aliyuncs.com/wkmx/xxl-job-admin:2.2.0
+          docker tag python:3.7.17-alpine3.18 registry.cn-hangzhou.aliyuncs.com/wkmx/python:3.7.17-alpine3.18
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/xxl-job-admin:2.2.0
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/python:3.7.17-alpine3.18
 
 
