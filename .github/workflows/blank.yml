@@ -47,10 +47,10 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull apacherocketmq/rocketmq-dashboard:2.0.1
+          docker pull node:20.19.4-slim
 
-          docker tag apacherocketmq/rocketmq-dashboard:2.0.1 registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.0.1
+          docker tag node:20.19.4-slim registry.cn-hangzhou.aliyuncs.com/wkmx/node:20.19.4-slim
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.0.1
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/node:20.19.4-slim
 
 
