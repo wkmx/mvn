@@ -47,10 +47,9 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull node:20.19.4-slim
+          docker pull golang:1.25.0-alpine3.22
 
-          docker tag node:20.19.4-slim registry.cn-hangzhou.aliyuncs.com/wkmx/node:20.19.4-slim
+          docker tag golang:1.25.0-alpine3.22 registry.cn-hangzhou.aliyuncs.com/wkmx/golang:1.25.0-alpine3.22
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/node:20.19.4-slim
-
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/golang:1.25.0-alpine3.22
 
