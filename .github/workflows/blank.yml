@@ -47,9 +47,9 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
           
-          docker pull golang:1.25.0-alpine3.22
+          docker pull sonarsource/sonar-scanner-cli:11.4.0.2044_7.2.0
 
-          docker tag golang:1.25.0-alpine3.22 registry.cn-hangzhou.aliyuncs.com/wkmx/golang:1.25.0-alpine3.22
+          docker tag sonarsource/sonar-scanner-cli:11.4.0.2044_7.2.0 registry.cn-hangzhou.aliyuncs.com/wkmx/sonar-scanner-cli:11.4.0.2044_7.2.0
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/golang:1.25.0-alpine3.22
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/sonar-scanner-cli:11.4.0.2044_7.2.0
 
