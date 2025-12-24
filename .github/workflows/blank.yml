@@ -45,8 +45,9 @@ jobs:
           # docker tag grafana/loki-canary:3.0.0 ${REGISTRY}/loki-canary:3.0.0
 
           # docker push ${REGISTRY}/loki-canary:3.0.0
-          docker pull secfa/awvs:250204093
+          docker pull secfa/awvs:beta
 
-          docker tag secfa/awvs:250204093 registry.cn-hangzhou.aliyuncs.com/wkmx/awvs:250204093
+          docker tag secfa/awvs:beta registry.cn-hangzhou.aliyuncs.com/wkmx/awvs:beta
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/awvs:250204093
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/awvs:beta
+
