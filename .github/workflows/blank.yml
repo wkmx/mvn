@@ -47,8 +47,8 @@ jobs:
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
 
-          docker pull secfa/docker-awvs:250204093
+          docker pull secfa/docker-awvs:231123131
 
-          docker tag secfa/docker-awvs:250204093 registry.cn-hangzhou.aliyuncs.com/wkmx/docker-awvs:250204093
+          docker tag secfa/docker-awvs:231123131 registry.cn-hangzhou.aliyuncs.com/wkmx/docker-awvs:231123131
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/docker-awvs:250204093
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/docker-awvs:231123131
