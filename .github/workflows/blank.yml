@@ -46,8 +46,9 @@ jobs:
 
           # docker push ${REGISTRY}/loki-canary:3.0.0
 
-          docker pull invicti/acunetix:25.8
 
-          docker tag invicti/acunetix:25.8 registry.cn-hangzhou.aliyuncs.com/wkmx/acunetix:25.8
+          docker pull secfa/docker-awvs:250204093
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/acunetix:25.8
+          docker tag secfa/docker-awvs:250204093 registry.cn-hangzhou.aliyuncs.com/wkmx/docker-awvs:250204093
+
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/docker-awvs:250204093
