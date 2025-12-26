@@ -45,9 +45,8 @@ jobs:
           # docker tag grafana/loki-canary:3.0.0 ${REGISTRY}/loki-canary:3.0.0
 
           # docker push ${REGISTRY}/loki-canary:3.0.0
-          docker pull secfa/awvs:beta
+          docker pull alpine/java:21.0.4-jdk
 
-          docker tag secfa/awvs:beta registry.cn-hangzhou.aliyuncs.com/wkmx/awvs:beta
+          docker tag alpine/java:21.0.4-jdk registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk8:21.0.4-jdk-apline
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/awvs:beta
-
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk8:21.0.4-jdk-apline
