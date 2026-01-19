@@ -36,17 +36,8 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          # docker pull quay.io/minio/minio:RELEASE.2022-09-17T00-09-45Z
-          # REGISTRY="registry.cn-hangzhou.aliyuncs.com/wkmx"
-          
-          # docker pull grafana/loki-canary:3.0.0
+          docker pull xuxueli/xxl-job-admin:2.3.1
 
-          
-          # docker tag grafana/loki-canary:3.0.0 ${REGISTRY}/loki-canary:3.0.0
+          docker tag xuxueli/xxl-job-admin:2.3.1 registry.cn-hangzhou.aliyuncs.com/wkmx/xxl-job-admin:2.3.1
 
-          # docker push ${REGISTRY}/loki-canary:3.0.0
-          docker pull alpine/java:21.0.4-jdk
-
-          docker tag alpine/java:21.0.4-jdk registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk8:21.0.4-jdk-apline
-
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/openjdk8:21.0.4-jdk-apline
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/xxl-job-admin:2.3.1
