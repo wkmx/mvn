@@ -36,8 +36,10 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull xuxueli/xxl-job-admin:2.3.1
+          docker pull eclipse-temurin:17-jre-alpine-3.23
 
-          docker tag xuxueli/xxl-job-admin:2.3.1 registry.cn-hangzhou.aliyuncs.com/wkmx/xxl-job-admin:2.3.1
+          docker tag eclipse-temurin:17-jre-alpine-3.23 registry.cn-hangzhou.aliyuncs.com/wkmx/eclipse-temurin:17-jre-alpine-3.23
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/xxl-job-admin:2.3.1
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/eclipse-temurin:17-jre-alpine-3.23
+
+
