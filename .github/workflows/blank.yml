@@ -36,10 +36,10 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull apache/kafka:4.1.1
+          docker pull 1panel/cordys-crm:latest
 
-          docker tag apache/kafka:4.1.1 registry.cn-hangzhou.aliyuncs.com/wkmx/kafka:4.1.1
+          docker tag 1panel/cordys-crm:latest registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:latest
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/kafka:4.1.1
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:latest
 
 
