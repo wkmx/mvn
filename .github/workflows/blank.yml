@@ -36,10 +36,11 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull 1panel/cordys-crm:latest
+          docker pull 1panel/cordys-crm:v1.4.2
 
-          docker tag 1panel/cordys-crm:latest registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:latest
 
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:latest
+          docker tag 1panel/cordys-crm:v1.4.2 registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:v1.4.2
+
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:v1.4.2
 
 
