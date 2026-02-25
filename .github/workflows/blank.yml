@@ -36,11 +36,12 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull 1panel/cordys-crm:v1.4.2
+          docker pull easysoft/zentao:21.7.7-php7
+          docker tag easysoft/zentao:21.7.7-php7 registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.7-php7
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.7-php7
 
-
-          docker tag 1panel/cordys-crm:v1.4.2 registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:v1.4.2
-
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cordys-crm:v1.4.2
+          docker pull bitnami/redis:6.2
+          docker tag bitnami/redis:6.2 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2
 
 
