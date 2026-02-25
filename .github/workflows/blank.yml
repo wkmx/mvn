@@ -40,8 +40,5 @@ jobs:
           docker tag easysoft/zentao:21.7.7-php7 registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.7-php7
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.7-php7
 
-          docker pull bitnami/redis:6.2
-          docker tag bitnami/redis:6.2 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2
 
 
