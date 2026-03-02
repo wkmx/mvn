@@ -36,9 +36,9 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull apache/seata-server:2.6.0.jdk17
-          docker tag apache/seata-server:2.6.0.jdk17 registry.cn-hangzhou.aliyuncs.com/wkmx/seata-server:2.6.0.jdk17
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/seata-server:2.6.0.jdk17
+          docker pull apache/seata-server:2.6.0
+          docker tag apache/seata-server:2.6.0 registry.cn-hangzhou.aliyuncs.com/wkmx/seata-server:2.6.0
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/seata-server:2.6.0
 
 
 
