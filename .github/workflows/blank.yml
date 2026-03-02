@@ -36,9 +36,10 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull easysoft/zentao:21.7.7-php7
-          docker tag easysoft/zentao:21.7.7-php7 registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.7-php7
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.7-php7
+          docker pull apache/seata-server:2.6.0.jdk17
+          docker tag apache/seata-server:2.6.0.jdk17 registry.cn-hangzhou.aliyuncs.com/wkmx/seata-server:2.6.0.jdk17
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/seata-server:2.6.0.jdk17
+
 
 
 
