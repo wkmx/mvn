@@ -36,12 +36,8 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull hub.zentao.net/app/mariadb:10.6-bitnami
-          docker tag hub.zentao.net/app/mariadb:10.6-bitnami registry.cn-hangzhou.aliyuncs.com/wkmx/mariadb:10.6-bitnami
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/mariadb:10.6-bitnami
-
-          docker pull bitnami/redis:6.2.14
-          docker tag bitnami/redis:6.2.14 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
+          docker pull swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/redis:6.2.14
+          docker tag swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/redis:6.2.14 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
 
 
