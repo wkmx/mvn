@@ -36,9 +36,9 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/redis:6.2.14
-          docker tag swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/redis:6.2.14 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
+          docker pull easysoft/zentao:21.7.9-php7
+          docker tag easysoft/zentao:21.7.9-php7 registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.9-php7
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/zentao:21.7.9-php7
 
 
 
