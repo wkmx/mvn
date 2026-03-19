@@ -36,9 +36,13 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull eclipse-temurin:17-jdk
-          docker tag eclipse-temurin:17-jdk registry.cn-hangzhou.aliyuncs.com/wkmx/eclipse-temurin:17-jdk
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/eclipse-temurin:17-jdk
+          docker pull hub.zentao.net/app/mariadb:10.6-bitnami
+          docker tag hub.zentao.net/app/mariadb:10.6-bitnami registry.cn-hangzhou.aliyuncs.com/wkmx/mariadb:10.6-bitnami
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/mariadb:10.6-bitnami
+
+          docker pull bitnami/redis:6.2.14
+          docker tag bitnami/redis:6.2.14 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.14
 
 
 
