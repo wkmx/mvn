@@ -37,7 +37,7 @@ jobs:
       - name: Push to Docker Registry
         run: |
           docker pull python:3.12-slim
-          docker tag python:3.12-slim registry.cn-hangzhou.aliyuncs.com/python:3.12-slim
+          docker tag python:3.12-slim registry.cn-hangzhou.aliyuncs.com/wkmx/python:3.12-slim
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/python:3.12-slim
 
 
