@@ -37,8 +37,8 @@ jobs:
       - name: Push to Docker Registry
         run: |
           docker pull postgres:16-alpine
-          docker tag postgres:16-alpine registry.cn-hangzhou.aliyuncs.com/postgres:16-alpine
-          docker push registry.cn-hangzhou.aliyuncs.com/postgres:16-alpine
+          docker tag postgres:16-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/postgres:16-alpine
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/postgres:16-alpine
 
 
 
