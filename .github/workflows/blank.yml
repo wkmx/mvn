@@ -36,7 +36,7 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull nginx:1.27-alpine
-          docker tag nginx:1.27-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/nginx:1.27-alpine
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/nginx:1.27-alpine
+          docker pull node:22-alpine
+          docker tag node:22-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/node:22-alpine
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/node:22-alpine
 
