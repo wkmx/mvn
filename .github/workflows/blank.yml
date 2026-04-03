@@ -36,7 +36,7 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull node:22-alpine
-          docker tag node:22-alpine registry.cn-hangzhou.aliyuncs.com/wkmx/node:22-alpine
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/node:22-alpine
+          docker pull maven:3.9-eclipse-temurin-17
+          docker tag maven:3.9-eclipse-temurin-17 registry.cn-hangzhou.aliyuncs.com/wkmx/maven:3.9-eclipse-temurin-17
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/maven:3.9-eclipse-temurin-17
 
