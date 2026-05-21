@@ -36,6 +36,6 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull eceasy/cli-proxy-api:v7.0.2
-          docker tag eceasy/cli-proxy-api:v7.0.2 registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.0.2
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.0.2
+          docker pull pgvector/pgvector:pg15
+          docker tag pgvector/pgvector:pg15 registry.cn-hangzhou.aliyuncs.com/wkmx/pgvector:pg15
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/pgvector:pg15
