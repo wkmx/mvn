@@ -36,6 +36,6 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull bitnami/kafka:3.8.0-debian-12-r5
-          docker tag bitnami/kafka:3.8.0-debian-12-r5 registry.cn-hangzhou.aliyuncs.com/wkmx/kafka:3.8.0-debian-12-r5
+          docker pull docker swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/kafka:3.8.0-debian-12-r5
+          docker tag swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/kafka:3.8.0-debian-12-r5 registry.cn-hangzhou.aliyuncs.com/wkmx/kafka:3.8.0-debian-12-r5
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/kafka:3.8.0-debian-12-r5
