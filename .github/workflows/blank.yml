@@ -36,6 +36,6 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull livekit/livekit-server:v1.13
-          docker tag livekit/livekit-server:v1.13 registry.cn-hangzhou.aliyuncs.com/wkmx/livekit-server:v1.13
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/livekit-server:v1.13
+          docker pull provectuslabs/kafka-ui:v0.7.2
+          docker tag provectuslabs/kafka-ui:v0.7.2 registry.cn-hangzhou.aliyuncs.com/wkmx/kafka-ui:v0.7.2
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/kafka-ui:v0.7.2
