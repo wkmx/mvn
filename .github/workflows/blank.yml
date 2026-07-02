@@ -36,6 +36,14 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull provectuslabs/kafka-ui:v0.7.2
-          docker tag provectuslabs/kafka-ui:v0.7.2 registry.cn-hangzhou.aliyuncs.com/wkmx/kafka-ui:v0.7.2
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/kafka-ui:v0.7.2
+          docker pull calciumion/new-api:v1.0.0-rc.15
+          docker tag calciumion/new-api:v1.0.0-rc.15 registry.cn-hangzhou.aliyuncs.com/wkmx/new-api:v1.0.0-rc.15
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/new-api:v1.0.0-rc.15
+
+          docker pull redis:6.2.22
+          docker tag redis:6.2.22 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.22
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.22
+
+          docker pull postgres:15
+          docker tag postgres:15 registry.cn-hangzhou.aliyuncs.com/wkmx/postgres:15
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/postgres:15
