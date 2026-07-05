@@ -36,14 +36,7 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull calciumion/new-api:v1.0.0-rc.15
-          docker tag calciumion/new-api:v1.0.0-rc.15 registry.cn-hangzhou.aliyuncs.com/wkmx/new-api:v1.0.0-rc.15
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/new-api:v1.0.0-rc.15
+          docker pull calciumion/cli-proxy-api:v7.2.50
+          docker tag calciumion/cli-proxy-api:v7.2.50 registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
 
-          docker pull redis:6.2.22
-          docker tag redis:6.2.22 registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.22
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/redis:6.2.22
-
-          docker pull postgres:15
-          docker tag postgres:15 registry.cn-hangzhou.aliyuncs.com/wkmx/postgres:15
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/postgres:15
