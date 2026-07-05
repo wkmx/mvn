@@ -36,7 +36,7 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull calciumion/cli-proxy-api:v7.2.50
-          docker tag calciumion/cli-proxy-api:v7.2.50 registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
+          docker pull eceasy/cli-proxy-api:v7.2.50
+          docker tag eceasy/cli-proxy-api:v7.2.50 registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
           docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
 
