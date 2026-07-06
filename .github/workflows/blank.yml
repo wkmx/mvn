@@ -36,7 +36,6 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull eceasy/cli-proxy-api:v7.2.50
-          docker tag eceasy/cli-proxy-api:v7.2.50 registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/cli-proxy-api:v7.2.50
-
+          docker pull node:24.18-slim
+          docker tag node:24.18-slim registry.cn-hangzhou.aliyuncs.com/wkmx/node:24.18-slim
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/node:24.18-slim
