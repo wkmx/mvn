@@ -36,6 +36,12 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull node:24.18-slim
-          docker tag node:24.18-slim registry.cn-hangzhou.aliyuncs.com/wkmx/node:24.18-slim
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/node:24.18-slim
+          docker pull justsong/one-api:v0.6.11-preview.7
+          docker tag justsong/one-api:v0.6.11-preview.7 registry.cn-hangzhou.aliyuncs.com/wkmx/one-api:v0.6.11-preview.7
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/one-api:v0.6.11-preview.7
+
+          docker pull mysql:8.2.0
+          docker tag mysql:8.2.0 registry.cn-hangzhou.aliyuncs.com/wkmx/mysql:8.2.0
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/mysql:8.2.0
+
+
