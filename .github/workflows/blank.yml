@@ -36,10 +36,9 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull onlyoffice/documentserver:9.3
-          docker tag onlyoffice/documentserver:9.3 registry.cn-hangzhou.aliyuncs.com/wkmx/onlyoffice:9.3
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/onlyoffice:9.3
-
+          docker pull alpine:3.24.2
+          docker tag alpine:3.24.2 registry.cn-hangzhou.aliyuncs.com/wkmx/alpine:3.24.2
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/alpine:3.24.2
 
 
 
