@@ -36,9 +36,9 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull alpine:3.24.2
-          docker tag alpine:3.24.2 registry.cn-hangzhou.aliyuncs.com/wkmx/alpine:3.24.2
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/alpine:3.24.2
+          docker pull golang:1.26.9-alpine3.24
+          docker tag golang:1.26.9-alpine3.24 registry.cn-hangzhou.aliyuncs.com/wkmx/golang:1.26.9-alpine3.24
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/golang:1.26.9-alpine3.24
 
 
 
