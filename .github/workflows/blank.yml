@@ -36,9 +36,9 @@ jobs:
         run: |
       - name: Push to Docker Registry
         run: |
-          docker pull python:3.12.16-alpine3.24
-          docker tag python:3.12.16-alpine3.24 registry.cn-hangzhou.aliyuncs.com/wkmx/python:3.12.16-alpine3.24
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/python:3.12.16-alpine3.24
+          docker pull apacherocketmq/rocketmq-dashboard:2.1.0
+          docker tag apacherocketmq/rocketmq-dashboard:2.1.0 registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.1.0
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.1.0
 
 
 
