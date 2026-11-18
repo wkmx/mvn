@@ -38,7 +38,7 @@ jobs:
         run: |
           docker pull apacherocketmq/rocketmq-dashboard:2.1.0
           docker tag apacherocketmq/rocketmq-dashboard:2.1.0 registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.1.0
-          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.1.0
+          docker push registry.cn-hangzhou.aliyuncs.com/wkmx/rocketmq-dashboard:2.1.0 
 
 
 
